@@ -7,6 +7,9 @@ public class CreateCubes : MonoBehaviour {
 	private GameObject[] sampleCubes = new GameObject[512];
 	public float maxScale;
 	void Start () {
+		foreach (string device in Microphone.devices) {
+			Debug.Log("Name: " + device);
+		}
 		for (int i = 0; i < 512; i++)
 		{
 			GameObject instanceCube = (GameObject)Instantiate (cube);
